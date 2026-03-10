@@ -1824,4 +1824,30 @@ setTimeout(showToast,3000);setInterval(showToast,12000);
         <p>Esta oferta não voltará a aparecer. Se você fechar esta janela, perderá o acesso a este desconto especial para sempre.</p>
       </div>
 
-      <a href="https://www.ggcheckout.com/checkout/v5/kPIp6f0yZO1hsQKJsqld" target="_blank" class="bt
+      <a href="https://www.ggcheckout.com/checkout/v5/kPIp6f0yZO1hsQKJsqld" target="_blank" class="btn-modal-yes">🔓 Sim! Quero a Oferta Especial</a>
+
+      <a href="https://www.ggcheckout.com/checkout/v5/TMTSepbxV9QXZlr5NEZE" target="_blank" class="btn-modal-no" onclick="closeUpgradeModal()">Não obrigado, prefiro o plano básico mesmo</a>
+
+    </div>
+  </div>
+</div>
+
+<script>
+// Modal
+function openUpgradeModal(e){
+  if(e) e.preventDefault();
+  document.getElementById('upgradeModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeUpgradeModal(){
+  document.getElementById('upgradeModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+var modal=document.getElementById('upgradeModal');
+if(modal) modal.addEventListener('click',function(e){
+  if(e.target===this) closeUpgradeModal();
+});
+</script>
+
+</body>
+</html>
